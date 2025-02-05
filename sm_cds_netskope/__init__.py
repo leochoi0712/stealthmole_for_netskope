@@ -1,1 +1,0 @@
-"""StealthMole CDS plugin."""
