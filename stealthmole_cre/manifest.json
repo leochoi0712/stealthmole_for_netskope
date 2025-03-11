@@ -1,0 +1,43 @@
+{
+    "name": "StealthMole",
+    "netskope": false,
+    "description": "StealthMole UB Plugin for Netskope",
+    "id": "stealthmole_cre",
+    "version": "1.0.0",
+    "module": "CRE",
+    "patch_supported": false,
+    "configuration": [
+        {
+            "label": "Access Key",
+            "key": "access_key",
+            "type": "password",
+            "default": "",
+            "mandatory": true,
+            "description": "Provide the Access Key from StealthMole platform."
+        },
+        {
+            "label": "Secret Key",
+            "key": "secret_key",
+            "type": "password",
+            "default": "",
+            "mandatory": true,
+            "description": "Provide the Secret Key from StealthMole platform."
+        },
+        {
+            "label": "Search Keyword",
+            "key": "search_query",
+            "type": "text",
+            "default": "",
+            "mandatory": true,
+            "description": "The keyword to search from StealthMole Database."
+        },
+        {
+            "label": "Initial Range (in days)",
+            "key": "init_range",
+            "type": "number",
+            "mandatory": true,
+            "default": 0,
+            "description": "Number of days to pull the data for the initial run."
+        }
+    ]
+}

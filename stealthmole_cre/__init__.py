@@ -1,0 +1,1 @@
+"""StealthMole CRE plugin."""
