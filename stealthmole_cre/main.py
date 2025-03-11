@@ -66,13 +66,13 @@ class StealthMolePlugin(PluginBase):
                 name="Users",
                 fields=[
                     EntityField(
-                        name="User Email", type=EntityFieldType.STRING, required=True
-                    ),
-                    EntityField(
-                        name="Host", type=EntityFieldType.STRING, required=True
+                        name="Email", type=EntityFieldType.STRING, required=True
                     ),
                     EntityField(
                         name="Password", type=EntityFieldType.STRING, required=True
+                    ),
+                    EntityField(
+                        name="Leaked From", type=EntityFieldType.STRING, required=True
                     ),
                 ],
             )
@@ -100,10 +100,11 @@ class StealthMolePlugin(PluginBase):
             )
             resp_json = json.loads(resp.content)
             data = resp_json.get("data", [])
-            records = {"User Email": []}
+            records = {"Email": [], "Password": [], "Leaked From": []}
             for record in data:
-                records["User Email"].append(record["user"])
-
+                records["Email"].append(record["user"])
+                records["Password"].append(record["password"])
+                records["Leaked From"].append(record["host"])
         self.logger.info(
             f"{self.log_prefix}: Successfully fetched {len(records)} {entity} from the platform."
         )

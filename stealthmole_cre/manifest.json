@@ -24,7 +24,7 @@
             "description": "Provide the Secret Key from StealthMole platform."
         },
         {
-            "label": "Search Keyword",
+            "label": "Search Domain",
             "key": "search_query",
             "type": "text",
             "default": "",
