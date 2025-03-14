@@ -106,17 +106,20 @@ class StealthMolePlugin(PluginBase):
                     {
                         "Email": record["user"],
                         "Password": record["password"],
-                        "Leaked Host": record["host"],
+                        "Leaked From": record["host"],
                     }
                 )
         self.logger.info(
-            f"{self.log_prefix}: Successfully fetched {len(records)} {entity} {records} from the platform."
+            f"{self.log_prefix}: Successfully fetched {len(records)} {entity} from the platform."
         )
 
         return records
 
     def update_records(self, entity: str, records: list[dict]):
         """Update entity records from a third party API."""
+        self.logger.info(
+            f"{self.log_prefix}: Updating {len(records)} {entity} from the platform."
+        )
         return records
 
     def validate(self, configuration: dict) -> ValidationResult:
