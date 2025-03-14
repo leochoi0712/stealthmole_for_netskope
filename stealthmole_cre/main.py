@@ -96,7 +96,7 @@ class StealthMolePlugin(PluginBase):
                 access_key=access_key,
                 secret_key=secret_key,
                 query=f"email:{query}",
-                # start=int(start.timestamp()),
+                start=int(start.timestamp()),
             )
             resp_json = json.loads(resp.content)
             data = resp_json.get("data", [])
@@ -117,9 +117,6 @@ class StealthMolePlugin(PluginBase):
 
     def update_records(self, entity: str, records: list[dict]):
         """Update entity records from a third party API."""
-        self.logger.info(
-            f"{self.log_prefix}: Updating {len(records)} {entity} from the platform."
-        )
         return records
 
     def validate(self, configuration: dict) -> ValidationResult:
