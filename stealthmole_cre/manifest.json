@@ -29,7 +29,7 @@
             "type": "text",
             "default": "",
             "mandatory": true,
-            "description": "The keyword to search from StealthMole Database."
+            "description": "The email domain to search from StealthMole Database."
         },
         {
             "label": "Initial Range (in days)",
