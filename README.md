@@ -7,19 +7,19 @@ StealthMole CRE monitors the **Deep and dark web (DDW)** for data leaks, with a 
 
 ### Obtain API Keys
 
-API keys to integrate with StealthMole's API.
+- API keys to integrate with StealthMole's API.
 
-Apply for the StealthMole's free license and obtain access + secret API keys.
+- Apply for the StealthMole's free license and obtain access + secret API keys.
 
-https://stealthmole.webflow.io/request-thirdparty-account
+- Link: https://stealthmole.webflow.io/request-thirdparty-account
 
 
 ### Search Domain
 
-The email domain the user wishes to monitor. 
+- The email domain the user wishes to monitor. 
 
-For example, if you wish to monitory Stealthmole's domain, you can insert `stealthmole.com` as the search domain.
+- For example, if you wish to monitory Stealthmole's domain, you can insert `stealthmole.com` as the search domain.
 
 ### Initial Range 
 
-Number of days to pull the data for the initial run.
+- Number of days to pull the data for the initial run.
