@@ -96,11 +96,11 @@ class StealthMolePlugin(PluginBase):
                 access_key=access_key,
                 secret_key=secret_key,
                 query=f"email:{query}",
-                start=int(start.timestamp()),
+                # start=int(start.timestamp()),
             )
             resp_json = json.loads(resp.content)
             data = resp_json.get("data", [])
-            records = []
+            records = {"Email": [], "Password": [], "Leaked From": []}
             for record in data:
                 records.append(
                     {
