@@ -102,15 +102,11 @@ class StealthMolePlugin(PluginBase):
             data = resp_json.get("data", [])
             records = {"Email": [], "Password": [], "Leaked From": []}
             for record in data:
-                records.append(
-                    {
-                        "Email": record["user"],
-                        "Password": record["password"],
-                        "Leaked From": record["host"],
-                    }
-                )
+                records["Email"].append(record["user"])
+                records["Password"].append(record["password"])
+                records["Leaked From"].append(record["host"])
         self.logger.info(
-            f"{self.log_prefix}: Successfully fetched {len(records)} {entity} from the platform."
+            f"{self.log_prefix}: Successfully fetched {len(records)} {entity} {records} from the platform."
         )
 
         return records
